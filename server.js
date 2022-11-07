@@ -12,6 +12,10 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, "/public")));
 
+app.use('/user', (req, res) => {
+  res.show('forbidden.html');
+});
+
 app.get("/", (req, res) => {
   res.show("index.html");
 });
@@ -33,7 +37,7 @@ app.get("/history", (req, res, next) => {
 });
 
 app.use((req, res) => {
-  res.status(404).send("404 not found...");
+  res.status(404).show("404.html");
 });
 
 app.listen(8000, () => {
