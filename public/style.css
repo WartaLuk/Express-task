@@ -12,5 +12,6 @@ h1 {
 
 .img-error {
   width: 90vh;
+  display: block;
   margin: auto;
 }
