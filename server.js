@@ -9,37 +9,37 @@ app.set("view engine", ".hbs");
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/user", (req, res) => {
-  res.render("forbidden", { layout: false});
+  res.render("forbidden");
 });
 
 app.get("/", (req, res) => {
-  res.render("index", { layout: false});
+  res.render("index" );
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { layout: false});
+  res.render("about" );
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact", { layout: false});
+  res.render("contact" );
 });
 
 app.get("/info", (req, res) => {
-  res.render("info", { layout: false});
+  res.render("info" );
 });
 
 app.get("/history", (req, res, next) => {
-  res.render("history", { layout: false});
+  res.render("history" );
 });
 
 app.get("/hello/:name", (req, res) => {
-  res.render("hello", { layout: false, name: req.params.name });
+  res.render("hello", { name: req.params.name });
 });
 
 app.use((req, res) => {
-  res.status(404).render("404.html", { layout: false});
+  res.status(404).render("404.html" );
 });
 
 app.listen(8000, () => {
-  console.log("Server is running on port: 8000", { layout: false});
+  console.log("Server is running on port: 8000" );
 });
