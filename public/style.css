@@ -1,13 +1,28 @@
+/* dark */
+.dark {
+  background-color: rgb(18,18,18);
+  color: rgb(240, 255, 240);
+}
+
+.dark a:link {
+  color: rgb(195, 15, 15);
+}
+.dark a:visited {
+  color: rgb(15, 15, 195);
+}
+/*  */
+
 h1 {
     font-weight: lighter;
     font-style: italic;
     text-align: center;
   }
 
-.container {
-  width: 900px;
-  margin: 10px;
-  padding: 32px;
+body {
+  width: 90vw;
+  height: 90vh;
+  text-align: center;
+  font-size: xx-large;
 }
 
 .img-error {
@@ -15,3 +30,16 @@ h1 {
   display: block;
   margin: auto;
 }
+
+a:link {
+  color: rgb(12,12,12);
+  font-style: italic;
+}
+
+a:visited {
+  color: rgb(25, 30, 200);
+  text-decoration: double;
+  font-style: oblique;
+}
+
+
