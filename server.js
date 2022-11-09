@@ -32,6 +32,16 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
+app.post("/contact/send-message", (req, res) => {
+  const { author, sender, title, message } = req.body;
+
+  if (author && sender && title && message) {
+    res.render('contact', { isSent: true });
+  } else {
+    res.render('contact', {isError: true});
+  }
+});
+
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
@@ -52,6 +62,6 @@ app.use((req, res) => {
   res.status(404).render("404");
 });
 
-app.listen(8008, () => {
+app.listen(8000, () => {
   console.log("Server is running on port: 8000");
 });
