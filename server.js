@@ -36,9 +36,9 @@ app.post("/contact/send-message", (req, res) => {
   const { author, sender, title, message, file } = req.body;
 
   if (author && sender && title && message && file) {
-    res.render('contact', { isSent: true, fileName: file });
+    res.render("contact", { isSent: true, fileName: file });
   } else {
-    res.render('contact', {isError: true});
+    res.render("contact", { isError: true });
   }
 });
 
@@ -51,7 +51,7 @@ app.get("/info", (req, res) => {
 });
 
 app.get("/history", (req, res, next) => {
-  res.render("history", {layout: "dark"});
+  res.render("history", { layout: "dark" });
 });
 
 app.get("/hello/:name", (req, res) => {
